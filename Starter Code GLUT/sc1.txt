@@ -1,0 +1,15 @@
+10 10 2
+
+mesh
+column.dat
+bricks.jpg
+0 0
+0
+1 1 1
+
+mesh
+bottle.dat
+bricks.jpg
+0 0
+0
+1 1 1
