@@ -1,51 +1,18 @@
-﻿Build started 10/16/2013 1:08:37 AM.
-     1>Project "C:\Users\James\Documents\GitHub\CIS460_HW_2\Starter Code GLUT\Starter Code GLUT.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt sceneGraph.cpp
-         sceneGraph.cpp
-     1>sceneGraph.cpp(15): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(16): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(17): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(19): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>sceneGraph.cpp(20): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>sceneGraph.cpp(58): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
-     1>sceneGraph.cpp(98): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(99): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(100): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(104): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(105): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(109): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(111): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>sceneGraph.cpp(113): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(114): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(115): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
-     1>sceneGraph.cpp(121): warning C4996: 'strtok': This function or variable may be unsafe. Consider using strtok_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\string.h(200) : see declaration of 'strtok'
+﻿Build started 11/14/2013 4:10:50 PM.
+     1>Project "C:\Users\james\Documents\GitHub\CIS_460_HW3\Starter Code GLUT\Starter Code GLUT.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Release\Starter Code GLUT.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\James\Documents\GitHub\CIS460_HW_2\Release\Starter Code GLUT.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:../freeglut/lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\James\Documents\GitHub\CIS460_HW_2\Release\Starter Code GLUT.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\James\Documents\GitHub\CIS460_HW_2\Release\Starter Code GLUT.lib" /MACHINE:X86 /SAFESEH Release\furniture.obj
-         Release\node.obj
-         Release\primative.obj
-         Release\glew.obj
-         Release\main.obj
-         Release\sceneGraph.obj
-         Generating code
-     1>c:\users\james\documents\github\cis460_hw_2\starter code glut\scenegraph.cpp(65): warning C4700: uninitialized local variable 'newChildren' used
-         Finished generating code
-         Starter Code GLUT.vcxproj -> C:\Users\James\Documents\GitHub\CIS460_HW_2\Release\Starter Code GLUT.exe
-     1>Done Building Project "C:\Users\James\Documents\GitHub\CIS460_HW_2\Starter Code GLUT\Starter Code GLUT.vcxproj" (Build target(s)).
+         All outputs are up-to-date.
+         Starter Code GLUT.vcxproj -> C:\Users\james\Documents\GitHub\CIS_460_HW3\Release\Starter Code GLUT.exe
+       FinalizeBuildStatus:
+         Deleting file "Release\Starter Code GLUT.unsuccessfulbuild".
+         Touching "Release\Starter Code GLUT.lastbuildstate".
+     1>Done Building Project "C:\Users\james\Documents\GitHub\CIS_460_HW3\Starter Code GLUT\Starter Code GLUT.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:06.39
+Time Elapsed 00:00:00.17

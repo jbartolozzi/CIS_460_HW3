@@ -1,5 +1,26 @@
-﻿Build started 11/8/2013 10:00:43 PM.
+﻿Build started 11/14/2013 4:07:37 PM.
+     1>Project "C:\Users\james\Documents\GitHub\CIS_460_HW3\Starter Code GLUT\Starter Code GLUT.vcxproj" on node 2 (Build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\Starter Code GLUT.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\james\documents\github\cis_460_hw3\starter code glut\main.cpp(462): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\james\Documents\GitHub\CIS_460_HW3\Debug\Starter Code GLUT.exe" /INCREMENTAL /NOLOGO /LIBPATH:../freeglut/lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\james\Documents\GitHub\CIS_460_HW3\Debug\Starter Code GLUT.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\james\Documents\GitHub\CIS_460_HW3\Debug\Starter Code GLUT.lib" /MACHINE:X86 Debug\furniture.obj
+         Debug\node.obj
+         Debug\primative.obj
+         Debug\glew.obj
+         Debug\main.obj
+         Debug\sceneGraph.obj
+         Starter Code GLUT.vcxproj -> C:\Users\james\Documents\GitHub\CIS_460_HW3\Debug\Starter Code GLUT.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\Starter Code GLUT.unsuccessfulbuild".
+         Touching "Debug\Starter Code GLUT.lastbuildstate".
+     1>Done Building Project "C:\Users\james\Documents\GitHub\CIS_460_HW3\Starter Code GLUT\Starter Code GLUT.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.01
+Time Elapsed 00:00:06.76

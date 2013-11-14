@@ -5,7 +5,7 @@ void furniture::draw(unsigned int _vbo, unsigned int _cbo, unsigned int _ibo, un
 	for (int i = 0; i < primatives.size(); i++) {
 		primatives[i]->color = _color;
 		primatives[i]->isSelected = selected;
-		primatives[i]->constructBuffers();
+		primatives[i]->reConstructBuffers();
 		primatives[i]->drawPrimative(_vbo, _cbo, _ibo, _nbo, positionLocation, colorLocation, normalLocation, u_modelMatrixLocation, transform);
 	}
 }
@@ -118,7 +118,7 @@ lamp::lamp(glm::vec3 _color) {
 
 meshFurniture::meshFurniture(glm::vec3 _color, char* filename) {
 	furnitureColor = _color;
-	mesh* m1 = new mesh(filename);
+	mesh* m1 = new mesh(filename,_color);
 	height = m1->findHeight();
 	primatives.push_back(m1);
 }

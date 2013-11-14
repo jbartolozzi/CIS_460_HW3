@@ -53,6 +53,8 @@ void primative::drawPrimative(unsigned int _vbo, unsigned int _cbo, unsigned int
 void primative::constructBuffers() {
 }
 
+void primative::reConstructBuffers() {
+}
 //####################################################################################################################
 //    v7----- v6
 //   /|      /|
@@ -104,6 +106,8 @@ cube::cube() {
 	points.push_back(p1);
 	points.push_back(p5);
 	points.push_back(p4);
+
+	constructBuffers();
 }
 
 
@@ -160,6 +164,8 @@ cube::cube(glm::vec3 _origin, glm::vec3 _color, glm::vec3 dimensions) {
 	points.push_back(p1);
 	points.push_back(p5);
 	points.push_back(p4);
+
+	constructBuffers();
 }
 
 void cube::constructBuffers() {
@@ -265,6 +271,26 @@ void cube::constructBuffers() {
 	nbo = normals;
 }
 
+void cube::reConstructBuffers() {
+	vector<float> colors;
+	if (isSelected == false) {
+		for (int i = 0; i < points.size(); i++) {
+			colors.push_back(color.r);
+			colors.push_back(color.g);
+			colors.push_back(color.b);
+		}
+	}
+	else {
+		for (int i = 0; i < points.size(); i++) {
+			colors.push_back(0.8f);
+			colors.push_back(0.f);
+			colors.push_back(0.f);
+		}
+	}
+
+	cbo = colors;
+}
+
 //################################################################################################################################
 
 
@@ -331,6 +357,7 @@ sphere::sphere() {
 	for(int i = 0; i < icoPoints.size(); i++) {
 		points.push_back(icoPoints[i]);
 	}
+	constructBuffers();
 }
 
 int sphere::getMidPoint(int a, int b) {
@@ -413,6 +440,7 @@ sphere::sphere(glm::vec3 _origin, glm::vec3 _color, float radius) {
 	for(int i = 0; i < icoPoints.size(); i++) {
 		points.push_back(icoPoints[i]);
 	}
+	constructBuffers();
 }
 
 
@@ -467,6 +495,24 @@ void sphere::constructBuffers() {
 	nbo = normals;
 }
 
+void sphere::reConstructBuffers() {
+	vector<float> colors;
+	if (isSelected == false) {
+		for (int i = 0; i < icoPoints.size(); i++) {
+			colors.push_back(color.r);
+			colors.push_back(color.g);
+			colors.push_back(color.b);
+		}
+	}
+	else {
+		for (int i = 0; i < icoPoints.size(); i++) {
+			colors.push_back(0.8f);
+			colors.push_back(0.f);
+			colors.push_back(0.f);
+		}
+	}
+	cbo = colors;
+}
 //###############################################################################################################################
 
 cylinder::cylinder() {
@@ -507,6 +553,8 @@ cylinder::cylinder() {
 
 		points.push_back(glm::vec4(x,height,z,1.f));
 	}
+
+	constructBuffers();
 }
 
 cylinder::cylinder(glm::vec3 _origin, glm::vec3 _color, glm::vec2 dimensions) {
@@ -547,6 +595,8 @@ cylinder::cylinder(glm::vec3 _origin, glm::vec3 _color, glm::vec2 dimensions) {
 
 		points.push_back(glm::vec4(x,origin.y + height,z,1.f));
 	}
+
+	constructBuffers();
 }
 
 void cylinder::constructBuffers() {
@@ -657,14 +707,36 @@ void cylinder::constructBuffers() {
 	ibo = index;
 }
 
+void cylinder::reConstructBuffers() {
+	vector<float> colors;
+	if (isSelected == false) {
+		for (int i = 0; i < points.size(); i++) {
+			colors.push_back(color.r);
+			colors.push_back(color.g);
+			colors.push_back(color.b);
+		}
+
+		
+	}
+	else {
+		for (int i = 0; i < points.size(); i++) {
+			colors.push_back(0.8f);
+			colors.push_back(0.f);
+			colors.push_back(0.f);
+		}
+	}
+	cbo = colors;
+}
 //###############################################################################################################################
 
 
 
 
-mesh::mesh(char* filename) {
+mesh::mesh(char* filename, glm::vec3 _color) {
+	color = _color;
 	isSelected = false;
 	readFile(filename);
+	constructBuffers();
 }
 
 void mesh::constructBuffers() {
@@ -739,7 +811,39 @@ void mesh::constructBuffers() {
 	cbo = colors1;
 	nbo = normals1;
 	ibo = index1;
+}
 
+void mesh::reConstructBuffers() {
+	vector<float> colors1;
+	for (int i = 0; i < faces.size(); i++) {
+		if (isSelected == false) { 
+			colors1.push_back(color.r);
+			colors1.push_back(color.g);
+			colors1.push_back(color.b);
+
+			colors1.push_back(color.r);
+			colors1.push_back(color.g);
+			colors1.push_back(color.b);
+
+			colors1.push_back(color.r);
+			colors1.push_back(color.g);
+			colors1.push_back(color.b);
+		}
+		else {
+			colors1.push_back(0.8f);
+			colors1.push_back(0.f);
+			colors1.push_back(0.f);
+
+			colors1.push_back(0.8f);
+			colors1.push_back(0.f);
+			colors1.push_back(0.f);
+
+			colors1.push_back(0.8f);
+			colors1.push_back(0.f);
+			colors1.push_back(0.f);
+		}
+	}
+	cbo = colors1;
 }
 
 void mesh::readFile(char* filename) {

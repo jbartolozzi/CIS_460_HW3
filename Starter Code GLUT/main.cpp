@@ -296,7 +296,7 @@ void display() {
 	//createRedSquare(modelView);	//PASS MODELVIEW BY COPY to get the nice scoping for hierarchical (i'm sure i spelled that wrong) transformations
 								//like Norm mentioned in his Scene Graph lecture
 	//createBlueSquare(modelView);
-	//modelView = glm::rotate(modelView, rotation, glm::vec3(1, 0, 0));
+	modelView = glm::rotate(modelView, rotation, glm::vec3(0, 1, 0));
 	myScene->root->traverse(vbo, cbo, ibo, nbo, positionLocation,colorLocation,normalLocation, u_modelMatrixLocation, modelView);
 	glutSwapBuffers();
 	old = newTime;

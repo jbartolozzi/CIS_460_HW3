@@ -26,6 +26,7 @@ public:
 	vector<float> nbo;
 	vector<glm::vec4> points;
 	virtual void constructBuffers();
+	virtual void reConstructBuffers();
 	virtual void drawPrimative(unsigned int _vbo, unsigned int _cbo, unsigned int _ibo, unsigned int _nbo, unsigned int positionLocation,
 		unsigned int colorLocation, unsigned int normalLocation, unsigned int u_modelMatrixLocation, glm::mat4 modelView);
 };
@@ -38,6 +39,7 @@ public:
 	cube(glm::vec3 _origin, glm::vec3 _color,glm::vec3 dimensions);
 	// Constructs the buffers to be passed out
 	void constructBuffers();
+	void reConstructBuffers();
 };
 
 class sphere : public primative {
@@ -63,6 +65,7 @@ public:
 	sphere(glm::vec3 _origin, glm::vec3 _color,float radius);
 	// Constructs the buffers to be passed out
 	void constructBuffers();
+	void reConstructBuffers();
 
 };
 
@@ -74,11 +77,12 @@ public:
 	cylinder(glm::vec3 _origin, glm::vec3 _color, glm::vec2 dimensions);
 	// Constructs the buffers to be passed out
 	void constructBuffers();
+	void reConstructBuffers();
 };
 
 class mesh : public primative {
 public:
-	mesh(char* filename);
+	mesh(char* filename, glm::vec3 _color);
 	struct face {
 		glm::vec3 ind1;
 		glm::vec3 ind2;
@@ -93,6 +97,7 @@ public:
 	};
 	float findHeight();
 	void constructBuffers();
+	void reConstructBuffers();
 private:
 	bool isExtrusion;
 	int numVerts;
